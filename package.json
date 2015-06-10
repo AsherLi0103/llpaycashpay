@@ -1,0 +1,36 @@
+{
+  "name": "llpaycashpay",
+  "description": "连连代付 提现 lianlian cashpay sdk",
+  "main": "index.js",
+  "author": {
+    "name": "navyxie"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "license": "ISC",
+  "keywords": [
+    "llpay",
+    "pay",
+    "api",
+    "连连代付",
+    "提现",
+    "代付",
+    "lianlian"
+  ],
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/navyxie/llpaycashpay.git"
+  },
+  "dependencies": {
+    "utf8": "^2.1.0",
+    "request":"2.57.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "muk": "0.3.2"
+  },
+  "homepage": "https://github.com/navyxie/llpaycashpay.git"
+}
