@@ -26,7 +26,7 @@ describe('#doPay()',function(){
 						body.sign_type.should.be.equal('RSA');
 					});
 					it('sign should ok',function(){
-						body.sign.should.be.equal("p6kfd130tucvy02lYWJNg96H3jIIJirSN2Cn9oWFqK4s4Zo1fDgQgsPkbGwE/S4cGKMfXfCnLvBTvq1DQ3QGh4N8atzLGDW9iWgH85uraOrdqL2qPoQYayVOCTmCmZkd5PvvX4Xkc8WHyy375Un5X+RblZm10+GZX7Z7VDmDil8=");
+						body.sign.should.be.equal("SxWMm0U6grOUGonR5FscqraGabV4M6CO33BI9YxQNeJLTx3t1VROdp/BOUXCBemVP9ehVxQm+PhacCxzsHq8iDMZzqmCRA9eSTMEvYN82P4+FSl19kFURdDzcpoYhISjTFI1TUhd7nOzbh+nKQ8IoKSGuceI3YfsTZH98stEhEA=");
 					})
 				});			
 				var res = {
@@ -83,7 +83,7 @@ describe('#doQuery()',function(){
 						body.sign_type.should.be.equal('MD5');
 					});
 					it('sign should ok',function(){
-						body.sign.should.be.equal("74663c859f8b3599b56d2b3aa79dff59");
+						body.sign.should.be.equal("d32dcfe032fa3461f87dee854c6bba0c");
 					})
 				});			
 				var res = {
