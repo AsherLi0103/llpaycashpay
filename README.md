@@ -6,6 +6,14 @@
 
 [`doQuery`](#doQuery)
 
+[`verify`](#verify)
+
+[`success`](#success)
+
+[`submitSuccess`](#submitSuccess)
+
+[`getStopNotifyData`](#getStopNotifyData)
+
 ### Demo:
 
 <a name="dopay" />
@@ -101,4 +109,48 @@ if(llpaycahpayInstance.verify(data)){
 }else{
 	console.log('数据被篡改');
 } 
+```
+
+<a name="verify" />
+
+### 对连连代付返回(同步或异步)的数据进行认证
+
+```js
+llpaycahpayInstance.verify({
+	ret_code: '0000',
+	ret_msg: '交易成功',
+	sign: 'C2KGixCDyCAqD9/fjU06WBog4MLrKOAZfDkhPkmDIJbQ2mN2/ykdSIX3OiKxcNkouvLwjHUsKDc5EHET/CERDqyWIcvtad9KPIdK0sX67teXw2Rqv2gf5ebVEjXpr+wI33L1efOqMQSh8jBheuzhM0lgio/XUXNoXHNwtKK4nxU=',
+	sign_type: 'RSA'
+})
+```
+
+<a name="success" />
+
+### 异步返回结果字段result_pay必须是SUCCESS才表示支付成功。
+
+```js
+//data为代付异步返回的结果
+if(llpaycahpayInstance.success(data)){
+	//todo,更新提现订单....
+}
+```
+
+<a name="submitSuccess" />
+
+### 提现请求提交成功
+
+```js
+//data为代付同步返回的结果
+if(llpaycahpayInstance.submitSuccess(data)){
+	//todo,更新提现订单....
+}
+```
+
+<a name="getStopNotifyData" />
+
+### 获取停止回调数据
+
+```js
+//商户返回这个就会停止连连代付的异步回调
+res.json(200,llpaycahpayInstance.getStopNotifyData());
 ```
